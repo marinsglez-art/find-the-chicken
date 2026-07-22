@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Chicken · Luxembourg Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">🐔 Gincana de bares · Lëtzebuerg</span>
+    <h1><span class="find">Find the</span><br><span class="chicken">Chicken</span></h1>
+    <p class="sub">Luxembourg Edition</p>
+    <p class="pitch">Seis equipos. Dos horas. Dos pollos sueltos por la ciudad. Consigue 20 puntos y desbloquea la caza para encontrar a nuestro amigo escondido en un bar.</p>
+    <div class="meta">
+      <div class="cell"><div class="num">30</div><div class="lbl">Jugadores</div></div>
+      <div class="cell"><div class="num">6</div><div class="lbl">Equipos de 5</div></div>
+      <div class="cell"><div class="num">20</div><div class="lbl">Puntos para cazar</div></div>
+      <div class="cell"><div class="num">2h</div><div class="lbl">De caos</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- CÓMO SE JUEGA -->
+<section id="fases">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Cómo se juega</h2></div>
+    <p class="sec-sub">El juego tiene dos fases. Primero acumulas. Luego cazas. En cuanto llegas a 20 puntos, cambian las reglas para siempre.</p>
+    <div class="phases">
+      <div class="phase">
+        <span class="tag">Fase 1</span>
+        <h3>Acumulación</h3>
+        <div class="range">0 → 20 puntos</div>
+        <ul>
+          <li>Cada equipo elige y completa pruebas para sumar puntos.</li>
+          <li>No hace falta hacerlas todas: hay 26 puntos disponibles, eliges tu ruta hasta 20.</li>
+          <li>Los dos pollos rondan la ciudad de incógnito. Si uno te encuentra, tienes que decidir (ver abajo).</li>
+          <li>Es la única fase en la que puedes perder puntos.</li>
+        </ul>
+        <div class="big-chicken">🐔</div>
+      </div>
+      <div class="phase hunt">
+        <span class="tag">Fase 2</span>
+        <h3>La caza</h3>
+        <div class="range">20+ puntos · modo cazador</div>
+        <ul>
+          <li>Al llegar a 20, tus puntos se <b>congelan</b>: ya nadie te los puede quitar.</li>
+          <li>Un pollo suelta en el grupo la primera pista. Solo los equipos con 20+ pueden usarla.</li>
+          <li>Encuentras al <b>pollo 1</b> → él te da la pista para llegar al <b>pollo 2</b>, el amigo escondido.</li>
+          <li>Gana el primer equipo que lo encuentre y diga la contraseña final.</li>
+        </ul>
+        <div class="big-chicken">🏆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECÁNICA POLLOS -->
+<section id="pollos">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Cuando un pollo te encuentra</h2></div>
+    <p class="sec-sub">Durante la Fase 1, los pollos van cambiando de bar sin avisar. Si te cruzas con uno mientras acumulas puntos, no puedes ignorarlo: tienes que elegir.</p>
+    <div class="pollo-box">
+      <div class="top">
+        <span class="ic">🐔</span>
+        <div><h3>Prueba del pollo · +2 / −2</h3><p>Elige en el momento. No hay tercera opción.</p></div>
+      </div>
+      <div class="choice">
+        <div class="opt plus">
+          <div class="pts">+2</div>
+          <div class="otitle">Haces la prueba</div>
+          <p>Completas ahí mismo, en el bar del pollo, la prueba exclusiva que te propone. Si la clavas, sumas 2 puntos y sigues tu camino.</p>
+        </div>
+        <div class="opt minus">
+          <div class="pts">−2</div>
+          <div class="otitle">Te la saltas</div>
+          <p>No te apetece, no puedes o no te sale. Pagas el peaje: pierdes 2 puntos y el pollo te deja seguir sin más.</p>
+        </div>
+      </div>
+      <div class="pollo-note">Ojo: esto solo pasa mientras estás por debajo de 20 puntos. En cuanto llegas a 20 y entras en modo caza, tus puntos quedan congelados y los pollos ya no te penalizan: pasan a ser tu presa.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCADOR EN VIVO -->
+<section id="marcador">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Marcador del equipo</h2></div>
+    <p class="sec-sub">Toca cada prueba que completéis y el marcador suma solo. Al llegar a 20 se desbloquea la caza. Guardadlo en el móvil y llevadlo abierto toda la noche.</p>
+    <div class="tracker">
+      <div class="tracker-top">
+        <div class="score"><span class="cur" id="cur">0</span><span class="of">/ 20 pts</span></div>
+        <span class="status" id="status">Fase 1 · Acumulando</span>
+      </div>
+      <div class="meter"><div class="fill" id="fill"></div></div>
+      <div class="tracker-foot">
+        <span class="hint" id="hint">Marca pruebas abajo para sumar.</span>
+        <button class="reset" id="reset">Reiniciar marcador</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBAS -->
+<section id="pruebas">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Las 15 pruebas</h2></div>
+    <p class="sec-sub">Todas se graban en foto o vídeo. Salvo que la prueba diga otra cosa, tienen que salir al menos 3 del equipo. Toca una tarjeta para marcarla como hecha.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- REGLAS -->
+<section id="normas">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Normas</h2></div>
+    <div class="rules">
+      <div class="rule"><span class="rn">01</span><p>Toda prueba se documenta con foto o vídeo. Sin prueba grabada, no hay puntos.</p></div>
+      <div class="rule"><span class="rn">02</span><p>Salvo que la prueba lo indique, en cada vídeo salen mínimo 3 del equipo.</p></div>
+      <div class="rule"><span class="rn">03</span><p>El alcohol siempre es opcional. Agua, refresco o sin alcohol puntúan exactamente igual.</p></div>
+      <div class="rule"><span class="rn">04</span><p>Nada de molestar a camareros, bloquear accesos ni grabar a desconocidos sin permiso.</p></div>
+      <div class="rule"><span class="rn">05</span><p>No se corre por carreteras, no se cruza en rojo y nadie se separa del grupo.</p></div>
+      <div class="rule"><span class="rn">06</span><p>Un mismo desconocido no puede participar en más de una prueba.</p></div>
+      <div class="rule warn"><span class="rn">!</span><p>Prohibido preguntar por el Chicken hasta desbloquear la caza a 20 puntos.</p></div>
+      <div class="rule warn"><span class="rn">!</span><p>Gana el equipo entero. Nadie abandona a un compañero por el camino.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section id="final">
+  <div class="wrap">
+    <div class="finale">
+      <p class="k">Nivel final · La contraseña</p>
+      <h2>Encontrarlo no basta</h2>
+      <p class="finale-text">Cuando localicéis al amigo, tenéis que acercaros y completar este diálogo exacto. Solo entonces cuenta como encontrado.</p>
+      <div class="dialogue">
+        <div class="line q"><b>El equipo pregunta</b>¿Por qué cruzó el Chicken el Grund?</div>
+        <div class="line a"><b>Él responde</b>Para escapar de los seis equipos.</div>
+        <div class="line f"><b>El equipo remata</b>Demasiado tarde. 🐔</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fc">🐔</div>
+    <p>Find the Chicken · Luxembourg Edition — hecho para una noche muy larga.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
