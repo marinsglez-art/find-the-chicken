@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Chicken · Luxembourg Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">🐔 Gincana de bares · Lëtzebuerg</span>
+    <h1><span class="find">Find the</span><br><span class="chicken">Chicken</span></h1>
+    <p class="sub">Luxembourg Edition</p>
+    <p class="pitch">Dos horas y cuatro pollos sueltos por la ciudad. Consigue 20 puntos haciendo pruebas y desbloquea la caza: gana el primer equipo que encuentre a las dos parejas de pollos.</p>
+    <div class="meta">
+      <div class="cell"><div class="num">4</div><div class="lbl">Pollos sueltos</div></div>
+      <div class="cell"><div class="num">2</div><div class="lbl">Fases</div></div>
+      <div class="cell"><div class="num">20</div><div class="lbl">Puntos para cazar</div></div>
+      <div class="cell"><div class="num">2h</div><div class="lbl">De caos</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- REGLAS DEL JUEGO -->
+<section id="reglas">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Reglas del juego</h2></div>
+    <p class="sec-sub">Todo se organiza por WhatsApp. Antes de empezar, aseguraos de estar en los dos grupos.</p>
+    <div class="setup">
+      <div class="set-card">
+        <span class="set-ic">📣</span>
+        <h3>Grupo general</h3>
+        <p>Donde los pollos informan de la puntuación de todos los equipos y se comparten los highlights de la noche en directo.</p>
+      </div>
+      <div class="set-card">
+        <span class="set-ic">🔒</span>
+        <h3>Grupo de cada equipo</h3>
+        <p>Cada equipo tiene su propio grupo con los pollos. Ahí se confirman las pruebas y, más tarde, llegan las pistas.</p>
+      </div>
+      <div class="set-card goal">
+        <span class="set-ic">🎯</span>
+        <h3>Objetivo general</h3>
+        <p>Encontrar a las dos parejas de pollos. El primer equipo que dé con los cuatro, gana la noche.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASE 1 -->
+<section id="fase1">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Fase 1 · Acumulación</h2></div>
+    <p class="sec-sub">Objetivo: conseguir 20 puntos haciendo pruebas.</p>
+    <div class="phase">
+      <span class="tag">Fase 1</span>
+      <h3>Cómo se suman los puntos</h3>
+      <div class="range">0 → 20 puntos</div>
+      <ul>
+        <li>Cada equipo elige libremente qué pruebas hacer de la lista. La lista se reparte durante la birra de bienvenida.</li>
+        <li>Al completar una prueba hay que <b>mandar una foto</b> al grupo del equipo como demostración.</li>
+        <li>Los puntos <b>no cuentan hasta que los pollos los confirmen</b> en ese grupo. Sin confirmación, no hay puntos.</li>
+        <li>Una vez confirmados, los apuntáis en el contador de esta web para llevar el control.</li>
+        <li>Es la única fase en la que se pueden perder puntos.</li>
+      </ul>
+      <div class="big-chicken">🐔</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENCUENTRO CON LOS POLLOS -->
+<section id="encuentro">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Si te cruzas con los pollos</h2></div>
+    <p class="sec-sub">Durante la Fase 1 los pollos andan sueltos por la ciudad. Si os los encontráis, os proponen una prueba extra. Si la superáis, elegís vosotros la recompensa.</p>
+    <div class="pollo-box">
+      <div class="top">
+        <span class="ic">🐔</span>
+        <div><h3>Prueba extra · tú eliges el premio</h3><p>Primero se hace la prueba. Después se decide.</p></div>
+      </div>
+      <div class="choice">
+        <div class="opt plus">
+          <div class="pts">+2</div>
+          <div class="otitle">Sumar para vosotros</div>
+          <p>Hacéis la prueba delante de los pollos y os lleváis 2 puntos directos a vuestro marcador. La opción segura para llegar antes a los 20.</p>
+        </div>
+        <div class="opt minus">
+          <div class="pts">−2</div>
+          <div class="otitle">Restar a un rival</div>
+          <p>En vez de sumar, elegís a otro equipo y le quitáis 2 puntos. No avanzáis vosotros, pero frenáis al que va líder.</p>
+        </div>
+      </div>
+      <div class="pollo-note"><b>Aviso importante:</b> los cuatro pollos van juntos hasta que el primer equipo llega a 20 puntos. En ese momento se separan en dos parejas y empieza la caza.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FASE 2 -->
+<section id="fase2">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Fase 2 · La caza</h2></div>
+    <p class="sec-sub">Objetivo: encontrar a los pollos.</p>
+    <div class="phase hunt">
+      <span class="tag">Fase 2</span>
+      <h3>Modo cazador</h3>
+      <div class="range">20+ puntos · puntos congelados</div>
+      <ul>
+        <li>Al llegar a 20 puntos, <b>ya nadie os puede quitar puntos</b>. Vuestro marcador se congela.</li>
+        <li>Los pollos avisan por el <b>grupo general</b> de que ese equipo ha comenzado la caza.</li>
+        <li>Por el <b>grupo privado</b>, los pollos os dan pistas de dónde está la <b>primera pareja</b>.</li>
+        <li>Cuando la encontréis, esa primera pareja os dará la pista hacia la <b>segunda pareja</b>.</li>
+        <li>Gana el primer equipo que encuentre a los <b>cuatro pollos</b>.</li>
+      </ul>
+      <div class="big-chicken">🏆</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARCADOR EN VIVO -->
+<section id="marcador">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Marcador del equipo</h2></div>
+    <p class="sec-sub">Marca las pruebas que los pollos ya os hayan confirmado. Usa los botones de ±2 para los encuentros con los pollos. Al llegar a 20 se desbloquea la caza.</p>
+    <div class="tracker">
+      <div class="tracker-top">
+        <div class="score"><span class="cur" id="cur">0</span><span class="of">/ 20 pts</span></div>
+        <span class="status" id="status">Fase 1 · Acumulando</span>
+      </div>
+      <div class="meter"><div class="fill" id="fill"></div></div>
+      <div class="adjust">
+        <button class="adj plus" id="plus2">+2 · prueba de los pollos</button>
+        <button class="adj minus" id="minus2">−2 · penalización</button>
+        <span class="adj-info" id="adjInfo"></span>
+      </div>
+      <div class="tracker-foot">
+        <span class="hint" id="hint">Marca pruebas abajo para sumar.</span>
+        <button class="reset" id="reset">Reiniciar marcador</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBAS -->
+<section id="pruebas">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Lista de pruebas</h2></div>
+    <p class="sec-sub">Elegid las que queráis, en el orden que queráis. Recordad: foto al grupo del equipo y esperar la confirmación de los pollos. Toca una tarjeta para marcarla.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- REGLAS -->
+<section id="normas">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Normas</h2></div>
+    <div class="rules">
+      <div class="rule"><span class="rn">01</span><p>Toda prueba se documenta con foto o vídeo. Sin prueba gráfica, no hay puntos.</p></div>
+      <div class="rule"><span class="rn">02</span><p>Los puntos solo cuentan cuando los pollos los confirman en el grupo del equipo.</p></div>
+      <div class="rule"><span class="rn">03</span><p>Salvo que la prueba lo indique, en cada vídeo salen mínimo 3 del equipo.</p></div>
+      <div class="rule"><span class="rn">04</span><p>Nada de molestar a camareros, bloquear accesos ni grabar a desconocidos sin permiso.</p></div>
+      <div class="rule"><span class="rn">05</span><p>Un mismo desconocido no puede participar en más de una prueba.</p></div>
+      <div class="rule warn"><span class="rn">!</span><p>Prohibido preguntar por los pollos hasta haber llegado a los 20 puntos.</p></div>
+      <div class="rule warn"><span class="rn">!</span><p>Gana el equipo entero. Nadie abandona a un compañero por el camino.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section id="final">
+  <div class="wrap">
+    <div class="finale">
+      <p class="k">Nivel final · La caza</p>
+      <h2>Dos parejas. Un ganador.</h2>
+      <p class="finale-text">Los cuatro pollos se separan en cuanto el primer equipo llega a 20 puntos. A partir de ahí, es una carrera.</p>
+      <div class="chain">
+        <div class="chain-step"><span class="cs-num">01</span><b>Primera pareja</b><p>Los pollos os mandan pistas por el grupo privado hasta que deis con ellos.</p></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-step"><span class="cs-num">02</span><b>Segunda pareja</b><p>La primera pareja os entrega la pista para llegar hasta los dos que faltan.</p></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-step win"><span class="cs-num">🏆</span><b>Victoria</b><p>El primer equipo que encuentre a los cuatro pollos gana la noche.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fc">🐔</div>
+    <p>Find the Chicken · Luxembourg Edition — hecho para una noche muy larga.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
